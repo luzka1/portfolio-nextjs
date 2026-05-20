@@ -1,0 +1,131 @@
+.header {
+    display: flex;
+    position: fixed;
+    left: 50%;
+    top: 2%;
+    transform: translateX(-50%);
+    width: 90vw;
+    height: 70px;
+    background-color: var(--header-background);
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    transition: 0.5s all;
+}
+
+.innerHeader {
+    display: flex;
+    width: 95%;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.innerHeader>img {
+    cursor: pointer;
+}
+
+.innerHeader>div {
+    display: flex;
+    gap: 50px;
+    font-size: 1.1rem;
+    height: auto;
+    align-items: center;
+}
+
+.innerHeader>div div, .innerHeader>div button {
+    cursor: pointer;
+}
+
+.menuLanguage {
+    position: relative;
+    width: 100px;
+}
+
+.innerMenuLanguage{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    border-radius: 8px;
+    border: 2px solid white;
+
+    transition: 200ms all;
+    width: 100%;
+    top: -22px;
+}
+
+.innerMenuLanguage div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transition: 200ms all;
+}
+
+.innerMenuLanguage div:hover {
+    background-color: #ffffff5c;
+}
+
+
+.btnHeader, .btnHeaderClose {
+    display: none;
+    align-items: center;
+    border: none;
+    background: none;
+    font-size: 30px;
+}
+
+@media (max-width:1024px) {
+    .innerHeader{
+        width: 90%;
+    }
+
+    .btnHeader {
+        display: flex;
+    }
+
+    .btnHeaderClose{
+        display: flex;
+        position: absolute;
+        top: 5vh;
+        right: 5vw;
+    }
+
+    .innerHeader>div{
+        display: none;
+    }
+
+    .responsiveHeader {
+        position: fixed;
+        right: 0;
+        left: 0;
+        top: 0vh;
+        transform: translateX(0);
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        border-radius: 0;
+        transition: 0.5s all;
+        
+    }
+
+    .responsiveHeader .innerHeader{
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+        padding: 50px 0;
+        justify-content: space-around;
+    }
+
+    .responsiveHeader .innerHeader>div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .responsiveHeader .btnHeader{
+        display: none;
+    }
+}

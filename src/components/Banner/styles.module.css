@@ -1,0 +1,109 @@
+.container{
+    display: flex;
+    height: 85vh;
+    background-image: url('/images/background.svg');
+    justify-content: center;
+    background-size: cover;
+}
+
+.indicationDown{
+    position: absolute;
+    top: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.indicationDown img{
+    height: 25px;
+}
+
+.innerContainer{
+    display: flex;
+    align-items: center;
+    width: 85%;
+    justify-content: space-between;
+}
+
+.innerContainer p{
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.innerContainer > div{
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+.innerContainer > div p {
+    line-height: 90%;
+}
+
+.innerContainer > div > div{
+    font-size: 6rem;
+    font-weight: 600;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.photo div{
+    width: 500px;
+    height: 500px;
+    background-image: url('/images/photolucas.svg');
+    background-position: center;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo div img {
+    height: 300px;
+}
+
+@media (max-width:1024px) {
+    .container{
+        height: auto;
+    }
+
+    .innerContainer{
+        gap: 40px;
+        flex-direction: column-reverse;
+        margin-bottom: 2rem;
+    }
+
+    .innerContainer p{
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    .innerContainer > div > div{
+        font-size: 3rem;
+        font-weight: 600;
+    }
+
+    .photo div{
+        margin-top: 15vh;
+        width: 300px;
+        height: 300px;
+    }
+
+    .photo div img {
+        height: 150px;
+    }
+
+    .buttons{
+        gap: 20px;
+    }
+
+    .indicationDown{
+        display: none;
+    }
+
+}

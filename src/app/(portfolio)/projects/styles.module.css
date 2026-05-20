@@ -1,0 +1,16 @@
+.container{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    overflow-x: hidden;
+    padding-top: 10vh;
+}
+
+.projects{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 5vh;
+}

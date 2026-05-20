@@ -1,0 +1,78 @@
+.cContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+.form{
+    background-color: var(--second-background);
+    border-radius: 32px;
+    width: 640px;
+    height: 640px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.form input{
+    background-color: var(--background-color);
+    border: none;
+    border-radius: 10px;
+    width: 480px;
+    min-height: 40px;
+    padding: 10px 25px;
+    color: white;
+    font-size: 20px;
+    resize: none;
+}
+
+.textarea {
+    background-color: var(--background-color);
+    border: none;
+    border-radius: 10px;
+    width: 480px;
+    min-height: 40px;
+    padding: 10px 25px;
+    color: white;
+    font-size: 20px;
+    resize: none;
+    height: 125px;
+}
+
+.form form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+@media (max-width:1024px){
+    .form{
+        max-width: 60%;
+        height: 100%;
+    }
+    .form input{
+        width: 80%;
+        min-height: 40px;
+        font-size: 1rem;
+    }
+
+    .textarea {
+        width: 80%;
+        min-height: 40px;
+        font-size: 1rem;
+    }
+
+    .form{
+        width: fit-content;
+        padding: 3rem 3rem;
+        height: fit-content;
+        gap: 20px;
+    }
+    
+}
+
+

@@ -1,0 +1,97 @@
+.abContainer{
+    margin: 0 auto;
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5rem;
+    padding: 0 0 2rem 0;
+    overflow-x: hidden;
+}
+
+.abContainer h2{
+    line-height: 80%;
+}
+
+.title{
+    width: 100%;
+    text-align: right;
+}
+
+.innerAbContainer {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.itens{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;
+    flex-wrap: nowrap;
+}
+
+.btn {
+    padding: 50px;
+}
+
+.btn::before{
+    background-color: rgb(21, 0, 30);
+}
+
+.btn:hover{
+    transform:scale(100%) !important;
+    cursor: auto;
+}
+
+.btn span{
+    padding:10px 20px;
+}
+
+.btn span:nth-child(1){
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--pink);
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 80%;
+}
+
+@media (max-width:1024px){
+    .abContainer{
+        gap: 1rem;
+    }
+    .innerAbContainer{
+        display: flex;
+        gap: 50px;
+    }
+    .itens{
+        gap: 25px;
+    }
+    .btn{
+        width: 275px;
+        padding: 15px;
+        display: flex;
+    }
+    .btn span{
+        padding:0px 20px;
+    }
+    .btn span:nth-child(1){
+        font-size: 2rem;
+        padding: 0;
+    }
+    .right{
+        display: none;
+    }
+}
