@@ -1,10 +1,10 @@
 "use client";
 
 import { useActionState, useEffect } from "react";
-import { Button } from "../Button";
 import { Input } from "../Input/Input";
 import { toast } from "react-toastify";
 import { loginAction } from "@/actions/login/login-action";
+import { AdminButton } from "../AdminButton/AdminButton";
 
 export function LoginForm() {
   const initialState = {
@@ -48,10 +48,9 @@ export function LoginForm() {
               placeholder="Insira sua senha"
               disabled={isPending}
             />
-            <Button
-              disabled={isPending}
-              text={isPending ? "Carregando..." : "Entrar"}
-            />
+            <AdminButton disabled={isPending}>
+              {isPending ? "Carregando..." : "Entrar"}
+            </AdminButton>
           </form>
         </div>
       </div>

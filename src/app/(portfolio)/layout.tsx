@@ -7,14 +7,12 @@ export default function PortfolioLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
-      <body className="">
-        <Header />
-        {children}
-        <Suspense fallback={<span>Carregando...</span>}>
-          <Footer />
-        </Suspense>
-      </body>
-    </html>
+    <>
+      <Header />
+      {children}
+      <Suspense fallback={<span>Carregando...</span>}>
+        <Footer />
+      </Suspense>
+    </>
   );
 }

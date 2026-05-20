@@ -16,7 +16,7 @@ export const findAllProjects = cache(async () => {
 export const findProjectById = cache(async (id: string) => {
   "use cache";
   cacheLife("minutes");
-  cacheTag(`post-${id}`);
+  cacheTag(`project-${id}`);
 
   const post = await projectRepository.findById(id).catch(() => undefined);
 

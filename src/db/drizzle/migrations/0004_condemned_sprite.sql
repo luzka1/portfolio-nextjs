@@ -1,0 +1,1 @@
+ALTER TABLE `projects` RENAME COLUMN "img_url" TO "img";
