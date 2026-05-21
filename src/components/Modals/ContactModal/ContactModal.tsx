@@ -37,7 +37,7 @@ export const ContactModal = ({ isOpen, setOpen }: IModalProps) => {
     {
       alt: "linkedin icon",
       description: "/images/linkedin.svg",
-      href: "https://www.linkedin.com/in/lucas-santos-341856247/",
+      href: "https://www.linkedin.com/in/lvkas/",
     },
     {
       alt: "email icon",

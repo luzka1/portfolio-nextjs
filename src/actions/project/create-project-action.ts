@@ -85,5 +85,5 @@ export async function createProjectAction(
 
   updateTag("projects");
 
-  redirect("/");
+  redirect(`/admin/projects/${newProject.id}?created=1`);
 }

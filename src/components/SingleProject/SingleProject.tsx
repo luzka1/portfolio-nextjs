@@ -16,9 +16,9 @@ export async function SingleProject({ idParam }: SingleProjectProps) {
     <div style={{ display: "flex", flexDirection: "column", gap: "50px" }}>
       <div className={styles.banner}>
         <Image
-          width={100}
-          height={0}
+          fill
           src={project.img || ""}
+          loading="eager"
           className={styles.projectImage}
           alt={`foto do projeto ${project.name}`}
         />

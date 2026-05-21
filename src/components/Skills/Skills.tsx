@@ -38,10 +38,7 @@ const itemsIcons = [
 
 export const Skills = () => {
   const handleClick = () => {
-    window.open(
-      "https://www.linkedin.com/in/lucas-santos-341856247/",
-      "_blank",
-    );
+    window.open("https://www.linkedin.com/in/lvkas/", "_blank");
   };
 
   return (
