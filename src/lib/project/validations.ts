@@ -29,7 +29,7 @@ const ProjectBaseSchema = z.object({
       message: "A imagem de capa precisa ser uma URL válida",
     })
     .optional(),
-  proj_link: z
+  proj_url: z
     .string()
     .trim()
     .refine(isUrlOrRelativePath, {

@@ -2,11 +2,13 @@
 
 import { makePublicProject, ProjectDTO } from "@/dto/project-dto";
 import { Input } from "../Input/Input";
-import { Button } from "../Button";
 import { createProjectAction } from "@/actions/project/create-project-action";
 import { useActionState, useEffect } from "react";
 import { AdminButton } from "../AdminButton/AdminButton";
 import { toast } from "react-toastify";
+import { updateProjectAction } from "@/actions/project/update-project-action";
+import { useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 type ManagePostFormUpdateProps = {
   mode: "update";
@@ -22,11 +24,20 @@ type ManagePostFormProps =
   | ManagePostFormUpdateProps;
 
 export function ManagePostForm(props: ManagePostFormProps) {
+  const { mode } = props;
+  const searchParams = useSearchParams();
+  const created = searchParams.get("created");
+  const router = useRouter();
+
   let publicPost;
+
+  if (mode === "update") {
+    publicPost = props.publicPost;
+  }
 
   const actionsMap = {
     create: createProjectAction,
-    update: "",
+    update: updateProjectAction,
   };
 
   const initialState = {
@@ -35,7 +46,7 @@ export function ManagePostForm(props: ManagePostFormProps) {
   };
 
   const [state, action, isPending] = useActionState(
-    createProjectAction,
+    actionsMap[mode],
     initialState,
   );
 
@@ -46,6 +57,24 @@ export function ManagePostForm(props: ManagePostFormProps) {
       state.errors.forEach((error) => toast.error(error));
     }
   }, [state.errors]);
+
+  (useEffect(() => {
+    if (state.sucess) {
+      toast.dismiss();
+      toast.success("Projeto atualizado com sucesso!");
+    }
+  }),
+    [state.sucess]);
+
+  useEffect(() => {
+    if (created === "1") {
+      toast.dismiss();
+      toast.success("Projeto criado com sucesso!");
+      const url = new URL(window.location.href);
+      url.searchParams.delete("created");
+      router.replace(url.toString());
+    }
+  }, [created, router]);
 
   return (
     <form action={action}>
@@ -87,7 +116,7 @@ export function ManagePostForm(props: ManagePostFormProps) {
           name="git_link"
           placeholder="Cole aqui o link do github do projeto"
           type="text"
-          defaultValue={formState.git_link}
+          defaultValue={formState.git_link || ""}
           disabled={isPending}
         />
 
@@ -95,7 +124,7 @@ export function ManagePostForm(props: ManagePostFormProps) {
           name="proj_url"
           placeholder="Cole aqui o link do projeto (opcional)"
           type="text"
-          defaultValue={formState.proj_url}
+          defaultValue={formState.git_link || ""}
           disabled={isPending}
         />
 

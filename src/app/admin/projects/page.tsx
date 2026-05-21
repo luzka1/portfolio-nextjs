@@ -1,4 +1,4 @@
-import PostListAdmin from "@/components/PostListAdmin/PostListAdmin";
+import PostListAdmin from "@/components/PostListAdmin/ProjectListAdmin";
 import { LoaderCircleIcon } from "lucide-react";
 import { Metadata } from "next";
 import { Suspense } from "react";

@@ -8,6 +8,6 @@ export interface ProjectRepository {
   delete(id: string): Promise<ProjectModel>;
   update(
     id: string,
-    newProjectData: Omit<ProjectModel, "id" | "createdAt " | "updatedAt">,
+    newProjectData: Omit<ProjectModel, "id" | "createdAt" | "updatedAt">,
   ): Promise<ProjectModel>;
 }

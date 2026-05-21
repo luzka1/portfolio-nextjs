@@ -1,8 +1,10 @@
 import { findAllProjects } from "@/lib/project/public";
 import { Edit2Icon, TrashIcon } from "lucide-react";
 import { ErrorMessage } from "../ErrorMessage/ErrorMessage";
+import Link from "next/link";
+import { DeleteProject } from "../DeleteProject/DeleteProject";
 
-export default async function PostListAdmin() {
+export default async function ProjectListAdmin() {
   const projects = await findAllProjects();
 
   if (projects.length <= 0) {
@@ -24,15 +26,11 @@ export default async function PostListAdmin() {
           >
             {project.name}
             <div className="flex gap-4">
-              <Edit2Icon className="hover:cursor-pointer hover:text-white/80" />
-              <button
-                type="button"
-                aria-label={`Excluir post: ${project.name}`}
-                title={`Excluir post: ${project.name}`}
-                className="text-red-600 hover:cursor-pointer hover:text-red-800"
-              >
-                <TrashIcon />
-              </button>
+              <Link href={`/admin/projects/${project.id}`}>
+                <Edit2Icon className="hover:cursor-pointer hover:text-white/80" />
+              </Link>
+
+              <DeleteProject name={project.name} id={project.id} />
             </div>
           </div>
         ))}

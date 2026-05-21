@@ -43,6 +43,13 @@
       "when": 1779320150563,
       "tag": "0005_thin_maddog",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "6",
+      "when": 1779375388970,
+      "tag": "0006_mysterious_the_executioner",
+      "breakpoints": true
     }
   ]
 }

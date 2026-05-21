@@ -21,13 +21,13 @@ export class DrizzleProjectRepository implements ProjectRepository {
   async findById(id: string): Promise<ProjectModel> {
     await asyncDelay(simulateWait);
 
-    const post = await drizzleDb.query.projects.findFirst({
+    const project = await drizzleDb.query.projects.findFirst({
       where: (projects, { eq }) => eq(projects.id, id),
     });
 
-    if (!post) throw new Error("Projeto não encontrado!");
+    if (!project) throw new Error("Projeto não encontrado!");
 
-    return post;
+    return project;
   }
 
   async create(project: ProjectModel): Promise<ProjectModel> {
@@ -62,11 +62,11 @@ export class DrizzleProjectRepository implements ProjectRepository {
     id: string,
     newProjectData: Omit<ProjectModel, "id" | "createdAt" | "updatedAt">,
   ): Promise<ProjectModel> {
-    const oldPost = await drizzleDb.query.projects.findFirst({
+    const oldproject = await drizzleDb.query.projects.findFirst({
       where: (projects, { eq }) => eq(projects.id, id),
     });
 
-    if (!oldPost) {
+    if (!oldproject) {
       throw new Error("Projeto não existe na base de dados");
     }
 
@@ -88,7 +88,7 @@ export class DrizzleProjectRepository implements ProjectRepository {
       .where(eq(projectsTable.id, id));
 
     return {
-      ...oldPost,
+      ...oldproject,
       ...projectData,
     };
   }
