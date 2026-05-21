@@ -1,8 +1,11 @@
+"use client";
+
 import styles from "./styles.module.css";
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
 import { modalAnimation } from "@/ui/animations";
 import Image from "next/image";
+import { CopyIcon, XIcon } from "lucide-react";
 
 interface IModalProps {
   isOpen: boolean;
@@ -43,7 +46,7 @@ export const ContactModal = ({ isOpen, setOpen }: IModalProps) => {
     {
       alt: "whatsapp icon",
       description: "/images/whatsapp.svg",
-      // href: `https://wa.me/${dataConfig?.whatsapp_number}?text=${dataConfig?.whatsapp_text}`,
+      href: `https://wa.me/11961499951?text=Olá%20preciso%20de%20um%20projeto!`,
     },
   ];
 
@@ -56,30 +59,30 @@ export const ContactModal = ({ isOpen, setOpen }: IModalProps) => {
         animate="visible"
       >
         <div>
-          <h3>Meus contatos</h3>
+          <h4 className="text-lg lg:text-4xl font-bold">Meus contatos</h4>
           <div onClick={setOpen}>
-            <Image
-              src="/images/close.svg"
-              alt="close button"
-              style={{ cursor: "pointer" }}
-            />
+            <XIcon className="w-8 h-8 hover:cursor-pointer" />
           </div>
         </div>
         <nav className={styles.navSocials}>
           {socialsIcons.map((item, id) => (
             <div key={id} className={styles.icon}>
               <a href={item.href} target="_blank" rel="noreferrer">
-                <Image src={item.description} width={40} alt={item.alt} />
+                <Image
+                  src={item.description}
+                  width={50}
+                  height={0}
+                  alt={item.alt}
+                />
               </a>
             </div>
           ))}
         </nav>
         <div className={styles.copyBoard}>
           <input readOnly placeholder={email} value={email} type="email" />
-          <Image
-            src="/images/copy.svg"
-            alt="copy button"
-            onClick={copyToClipboard}
+          <CopyIcon
+            className="w-8 h-8 hover:cursor-pointer"
+            onClick={() => copyToClipboard()}
           />
         </div>
       </motion.div>

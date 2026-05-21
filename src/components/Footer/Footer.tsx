@@ -40,14 +40,20 @@ export const Footer = () => {
     {
       alt: "whatsapp icon",
       description: "/images/whatsapp.svg",
-      // href: `https://wa.me/${dataConfig?.whatsapp_number}?text=${dataConfig?.whatsapp_text}`,
+      href: `https://wa.me/11961499951?text=Olá%20preciso%20de%20um%20projeto!`,
     },
   ];
 
   return (
     <footer>
       <div className={styles.logo}>
-        <Image height={0} src="/images/logo.svg" alt="logo" width={65} />
+        <Image
+          src="/images/logo.svg"
+          alt="logo"
+          width={50}
+          height={50}
+          className="h-auto w-auto"
+        />
       </div>
       <nav className={styles.navSocials}>
         {socialsIcons.map((item, id) => (
@@ -55,8 +61,8 @@ export const Footer = () => {
             <a href={item.href}>
               <Image
                 src={item.description}
-                width={50}
-                height={0}
+                width={5}
+                height={5}
                 alt={item.alt}
               />
             </a>

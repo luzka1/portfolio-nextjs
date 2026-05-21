@@ -15,10 +15,8 @@ export const Banner = () => {
 
   const transition = {
     duration: 1.5,
-    ease: [0, 0.71, 0.2, 1.01],
+    ease: [0, 0.71, 0.2, 1.01] as [number, number, number, number],
     delay: 1,
-    damping: 10,
-    stiffness: 100,
   };
 
   return (

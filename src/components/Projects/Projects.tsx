@@ -1,6 +1,8 @@
-import styles from "./styles.module.css";
-import { Button, Project, Skeleton } from "..";
+import { Button } from "../Button";
+import { Skeleton } from "../Skeleton";
 import { ThreeProjectsList } from "../ThreeProjectsList";
+import styles from "./styles.module.css";
+
 import { Suspense } from "react";
 
 export function Projects() {

@@ -1,6 +1,6 @@
 .navSocials {
     display: flex;
-    width: 30%;
+    width: 20%;
     justify-content: space-around;
 }
 
@@ -25,6 +25,8 @@
     border: 1px solid white;
     border-radius: 50%;
     padding: 0.5rem;
+    width: 50px;
+    height: auto;
 }
 
 .dev {

@@ -18,7 +18,7 @@ export async function SingleProject({ idParam }: SingleProjectProps) {
         <Image
           width={100}
           height={0}
-          src={project.img}
+          src={project.img || ""}
           className={styles.projectImage}
           alt={`foto do projeto ${project.name}`}
         />

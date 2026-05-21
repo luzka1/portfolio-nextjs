@@ -37,6 +37,7 @@ export const Header = () => {
           width={50}
           height={0}
           src="/images/logo.svg"
+          loading="eager"
           alt="logo"
           onClick={toHomePage}
         />

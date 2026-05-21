@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     template: "%s | Lucas",
   },
   description: "Contando um pouco da minha história profissional!",
+  icons: "/images/logo.svg",
 };
 
 export default function RootLayout({

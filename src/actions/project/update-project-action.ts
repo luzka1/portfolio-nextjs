@@ -66,7 +66,7 @@ export async function updateProjectAction(
 
   const newProject = {
     ...validProjectData,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAW37ElV06lFQcWoCyFRGlUXpnzuZ-6TwWyg&s",
+    img: validProjectData.img ?? null,
     git_link: validProjectData.git_link ?? null,
     proj_url: validProjectData.proj_url ?? null,
   };

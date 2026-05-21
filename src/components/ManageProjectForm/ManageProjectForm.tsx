@@ -9,6 +9,7 @@ import { toast } from "react-toastify";
 import { updateProjectAction } from "@/actions/project/update-project-action";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
+import { ImageUploader } from "../ImageUploader/ImageUploader";
 
 type ManagePostFormUpdateProps = {
   mode: "update";
@@ -124,11 +125,19 @@ export function ManagePostForm(props: ManagePostFormProps) {
           name="proj_url"
           placeholder="Cole aqui o link do projeto (opcional)"
           type="text"
-          defaultValue={formState.git_link || ""}
+          defaultValue={formState.proj_url || ""}
           disabled={isPending}
         />
 
-        {/* <ImageUploader disabled={isPending} /> */}
+        <ImageUploader disabled={isPending} />
+
+        <Input
+          name="img"
+          placeholder="Digite a url da imagem de capa"
+          type="text"
+          defaultValue={formState.img || ""}
+          disabled={isPending}
+        />
 
         <AdminButton type="submit">Enviar</AdminButton>
       </div>

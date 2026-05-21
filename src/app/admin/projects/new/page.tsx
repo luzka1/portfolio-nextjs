@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function AdminNewProjectPage() {
   return (
     <div className="bg-mauve-900 rounded-[50px] shadow-purple-950/50 shadow-2xl border border-zinc-800/80 p-12 flex flex-col">
-      <h1 className="text-xl font-extrabold">Criar post</h1>
+      <p className="font-bold mb-4">Criar projeto</p>
       <Suspense fallback={<Loading />}>
         <ManagePostForm mode="create" />
       </Suspense>

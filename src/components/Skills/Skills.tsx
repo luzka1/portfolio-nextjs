@@ -78,10 +78,11 @@ export const Skills = () => {
           {itemsIcons.map((item, id) => (
             <div key={id} className={styles.iconItem}>
               <Image
-                width={10}
-                height={10}
+                width={0}
+                height={0}
                 src={item.description}
                 alt={item.alt}
+                className="w-16 h-16"
               />
               <div>
                 <div>

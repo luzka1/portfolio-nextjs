@@ -86,7 +86,13 @@ export const AboutMe = () => {
         <div className={styles.right}>
           {itemsIcons.map((item, id) => (
             <div key={id}>
-              <Image src={item.src} width={70} height={0} alt={item.alt} />
+              <Image
+                src={item.src}
+                width={30}
+                height={30}
+                alt={item.alt}
+                className="h-18 w-auto"
+              />
             </div>
           ))}
         </div>

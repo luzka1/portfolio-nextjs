@@ -25,6 +25,8 @@
 
 .innerHeader>img {
     cursor: pointer;
+    width: auto;
+    height: auto;
 }
 
 .innerHeader>div {

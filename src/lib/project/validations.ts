@@ -22,18 +22,18 @@ const ProjectBaseSchema = z.object({
       message: "O link do github precisa ser uma URL válida",
     })
     .optional(),
-  img: z
-    .string()
-    .trim()
-    .refine(isUrlOrRelativePath, {
-      message: "A imagem de capa precisa ser uma URL válida",
-    })
-    .optional(),
   proj_url: z
     .string()
     .trim()
     .refine(isUrlOrRelativePath, {
       message: "O link do projeto precisa ser uma URL válida",
+    })
+    .optional(),
+  img: z
+    .string()
+    .trim()
+    .refine(isUrlOrRelativePath, {
+      message: "A imagem de capa precisa ser uma URL válida",
     })
     .optional(),
 });

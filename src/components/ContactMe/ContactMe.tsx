@@ -6,6 +6,7 @@ import { Button } from "..";
 import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
 import { modalAnimation } from "@/ui/animations";
+import { toast } from "react-toastify";
 
 export const ContactMe = () => {
   const [email, setEmail] = useState<string>("");
@@ -34,11 +35,14 @@ export const ContactMe = () => {
           response.status,
           response.text,
         );
-        alert("Email enviado com sucesso!");
+        toast.success("Email enviado com sucesso!");
       })
-      .catch((err) => {
+      .catch((err: unknown) => {
+        if (err instanceof Error) {
+          console.log(err.message);
+        }
         console.error("Falha ao enviar o email:", err);
-        alert("Falha ao enviar o email.");
+        toast.error("Falha ao enviar o email.");
       });
   };
 

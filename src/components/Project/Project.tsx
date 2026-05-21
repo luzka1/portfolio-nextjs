@@ -35,11 +35,12 @@ export const Project = ({ id, item }: ProjectProps) => {
       }
     >
       <Image
-        src={item.img}
+        src={item.img || ""}
         className={styles.image}
         style={{ borderRadius: "8px" }}
         height={0}
         width={1024}
+        loading="eager"
         alt={`foto do projeto ${item.name}`}
         title={`foto do projeto ${item.name}`}
       />

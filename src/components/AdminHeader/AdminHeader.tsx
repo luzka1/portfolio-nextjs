@@ -22,7 +22,7 @@ export function AdminHeader() {
   }
 
   return (
-    <header className="max-w-[90vw] w-full h-min bg-mauve-900 rounded-2xl shadow-purple-950/50 shadow-2xl border border-zinc-800/80 p-4">
+    <header className="w-full h-min bg-mauve-900 rounded-2xl shadow-purple-950/50 shadow-2xl border border-zinc-800/80 p-4">
       <ul className="flex flex-row gap-4">
         <li>
           <Link
