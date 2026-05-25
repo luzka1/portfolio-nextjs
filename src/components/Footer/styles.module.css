@@ -51,12 +51,6 @@
         width: 70%;
         justify-content: space-around;
     }
-
-    .icon img {
-        width: 20px;
-        height: 20px;
-    }
-
     .dev {
         width: 60%;
     }
