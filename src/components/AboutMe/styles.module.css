@@ -78,9 +78,11 @@
     }
     .itens{
         gap: 25px;
+        flex-wrap: wrap;
     }
     .btn{
         width: 275px;
+        max-width: 80vw;
         padding: 15px;
         display: flex;
     }

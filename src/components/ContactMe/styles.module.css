@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    margin-bottom: 100px;
 }
 
 .form{
@@ -50,27 +50,27 @@
 }
 
 @media (max-width:1024px){
-    .form{
-        max-width: 60%;
-        height: 100%;
+    .cContainer {
+        width: full;
     }
+
+       .form{
+        max-width: 80vw;
+        padding: 2rem;
+        height: fit-content;
+        gap: 20px;
+    }
+
     .form input{
-        width: 80%;
+        width: 100%;
         min-height: 40px;
         font-size: 1rem;
     }
 
     .textarea {
-        width: 80%;
+        width: 100%;
         min-height: 40px;
         font-size: 1rem;
-    }
-
-    .form{
-        width: fit-content;
-        padding: 3rem 3rem;
-        height: fit-content;
-        gap: 20px;
     }
     
 }

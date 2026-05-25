@@ -85,6 +85,12 @@
         flex-direction: column !important;
     }
 
+    .image{ 
+             min-width: 100%;
+     max-width: 100%;
+     width: 100%;
+    }
+
     .project span {
         font-size: 1.5rem;
     }

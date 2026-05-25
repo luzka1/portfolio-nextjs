@@ -61,17 +61,28 @@ export const AboutMe = () => {
           </div>
           <div>
             <p>
-              Sou um amante da tecnologia e de arte. Me formei no ensino médio
-              integrado ao curso técnico de Informática em 2020, desde então
-              criei um enorme interesse na área da tecnologia. Em 2022 me formei
-              no Instituto PROA que foi uma ótima experiência, onde eu pude
-              aprender conceitos importantes e mais aprofundados sobre
-              programação, sendo eles: HTML; CSS; JavaScript; React; JAVA;
-              SCRUM; Git e GitHub. Estou me aperfeiçoando em Front-End,
-              utilizando, TypeScript, ReactJs e NextJs. No futuro pretendo me
-              especializar na área de desenvolvimento web. Além disso, sou
-              autodidata nos estudos sobre edição de fotos e vídeos, assim me
-              impulsiono criativamente para a realização de projetos.
+              Sou desenvolvedor Front-End apaixonado por tecnologia e por
+              transformar ideias em experiências digitais funcionais e
+              intuitivas. Tenho experiência no desenvolvimento de aplicações web
+              modernas utilizando tecnologias como ReactJS, Next.js, TypeScript
+              e JavaScript, sempre buscando criar interfaces responsivas,
+              organizadas e com uma ótima experiência para o usuário.
+              <br /> <br />
+              Ao longo da minha trajetória, participei de projetos voltados para
+              diferentes áreas, incluindo plataformas corporativas e integrações
+              financeiras, trabalhando tanto na construção de novas
+              funcionalidades quanto na manutenção e evolução de sistemas já
+              existentes. Gosto de pensar além do código, entendendo as
+              necessidades do negócio e buscando soluções que realmente façam
+              sentido para quem vai utilizar o produto. Sou uma pessoa que
+              valoriza aprendizado constante, colaboração em equipe e boas
+              práticas de desenvolvimento.
+              <br /> <br />
+              Tenho experiência trabalhando em ambientes ágeis, participando de
+              code reviews, integrações com APIs, criação de componentes
+              reutilizáveis e melhorias de performance. Além da parte técnica,
+              acredito que comunicação, curiosidade e vontade de evoluir fazem
+              toda a diferença no desenvolvimento de qualquer projeto.
             </p>
           </div>
           <div className={styles.itens}>
