@@ -12,6 +12,8 @@ export const ContactMe = () => {
   const [email, setEmail] = useState<string>("");
   const [subject, setSubject] = useState<string>("");
   const [message, setMessage] = useState<string>("");
+  const serviceId = process.env.EMAILJS_SERVICE_ID || "service_usetfc9";
+  const userId = process.env.EMAILJS_USER_ID || "vdolnk6PZIIswd1Jv";
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
@@ -22,13 +24,13 @@ export const ContactMe = () => {
       message,
     };
 
+    if (!serviceId || !userId) {
+      toast.error("Serviço ou Usuário inválidos!");
+      return;
+    }
+
     emailjs
-      .send(
-        "service_l0hfrfn",
-        "template_3gbvmba",
-        templateParams,
-        "vdolnk6PZIIswd1Jv",
-      )
+      .send(serviceId, "template_3gbvmba", templateParams, userId)
       .then((response) => {
         console.log(
           "Email enviado com sucesso!",
